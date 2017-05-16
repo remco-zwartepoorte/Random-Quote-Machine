@@ -16,7 +16,7 @@ function tweetQuote() {
     window.open(tweetUrl);
 }
 
-$(document).ready(function () {
+window.onload = function () {
     getQuote();
     $("#newQuote").on("click", getQuote);
     $("#newTweet").on("click", tweetQuote);
