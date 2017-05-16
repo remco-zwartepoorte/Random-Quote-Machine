@@ -1,0 +1,27 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#Quote {
+  margin-top: 200px;
+}
+
+#quote-author {
+  text-align: right;
+}
+
+/* #newQuote {
+  margin-right: 10px;
+}
+*/
+
+/*.btn {
+  margin-top: 20px;
+  text-align: center;
+  }
+*/
+
+/* #quote-text {
+  color: gray;
+}
+*/
