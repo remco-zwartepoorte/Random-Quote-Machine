@@ -1,24 +1,25 @@
 function getQuote() {
-    $.ajax({
-        url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1", success: function (json) {
-            //console.log(json);
-            var post = json.shift();
-            $("#quote-text").html(post.content);
-            $("#quote-author").html("- " + post.title);
-        },
-        cache: false
+  fetch('https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1', {
+      cache: "reload"
+    })
+    .then(function (response) {
+      return response.json();
+    }).then(function (json) {
+      var post = json.shift();
+      document.getElementById('quote-text').innerHTML = post.content;
+      document.getElementById('quote-author').innerHTML = post.title;
+      console.log(post.content);
     });
 }
 
 function tweetQuote() {
-    var phrase = document.getElementById('quote-text').innerText + document.getElementById("quote-author").innerText;
-    var tweetUrl = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(phrase);
-    window.open(tweetUrl);
+  var phrase = document.getElementById('quote-text').innerText + document.getElementById("quote-author").innerText;
+  var tweetUrl = "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(phrase);
+  window.open(tweetUrl);
 }
 
-$(document).ready(function () {
-    getQuote();
-    $("#newQuote").on("click", getQuote);
-    $("#newTweet").on("click", tweetQuote);
-    //document.getElementById("quote-text").style.color = "blue";
+document.addEventListener('DOMContentLoaded', function () {
+  getQuote();
+  newQuote.addEventListener('click', getQuote);
+  newTweet.addEventListener('click', tweetQuote);
 });
