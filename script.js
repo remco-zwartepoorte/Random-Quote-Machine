@@ -8,7 +8,6 @@ function getQuote() {
       var post = json.shift();
       document.getElementById('quote-text').innerHTML = post.content;
       document.getElementById('quote-author').innerHTML = post.title;
-      //console.log(post.content);
     });
 }
 
