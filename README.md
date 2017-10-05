@@ -5,4 +5,4 @@ User Story:
 - I can click a button to show me a new random quote.
 - I can press a button to tweet out a quote.
 
-<b>If you are running Chrome, please disable cache in order to fetch new quotes.</b>
+<b>P.S. If you are running Chrome, please disable cache in order to fetch new quotes.</b>
