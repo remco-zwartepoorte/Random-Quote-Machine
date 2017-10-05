@@ -6,3 +6,5 @@ User Story:
 - I can press a button to tweet out a quote.
 
 <b>P.S. If you are running Chrome, please disable cache in order to fetch new quotes.</b>
+
+https://rrzwarte.github.io/Random-Quote-Machine/
